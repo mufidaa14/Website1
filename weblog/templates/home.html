@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title%}
+        menu
+        {% endblock title%}
+    </title>
+</head>
+<body>
+    {% block menu %}
+    <!--  tempat isi menu  -->
+    <h3>Profil Saya</h3>
+    <hr>
+    <style>
+        h3 {background-color: grey;}
+    </style>
+    <p>Saya mahasiswa Universitas Islam Madura prodi Teknik informatika semester 3, dengan ini saya menyertakan profil saya dan history saya : </p>
+    <div>
+        <ul>
+            <li><a href="{% url 'curriculumvitae' %}">Curriculum Vitae</a></li>
+            <li><a href="{% url 'cerita' %}">History</a></li>
+            <li><a href="{% url 'aboutme' %}">About me</a></li>
+        </ul>
+    </div>
+    {% endblock menu %}
+
+    {% block content %}
+    <!--  tempat isi web kontent  -->
+    {% endblock content %}
+</body>
+</html>
